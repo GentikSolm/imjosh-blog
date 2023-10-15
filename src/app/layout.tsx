@@ -5,7 +5,7 @@ import { AxiomWebVitals } from "next-axiom";
 import { DM_Sans } from "next/font/google";
 
 export const metadata = {
-  title: 'imjosh.dev',
+  title: "imjosh.dev",
   description: "",
 };
 
@@ -22,7 +22,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={clsx("h-full ", sans.variable)}>
-      <body className="h-full bg-neutral-50 dark:bg-neutral-800 transition-colors">
+      <body className="mx-auto h-full max-w-7xl bg-neutral-50 px-4 pt-10 text-gray-900 transition-colors dark:bg-neutral-800 sm:px-6 lg:px-8">
         {children}
         <Analytics />
         <AxiomWebVitals />
