@@ -1,3 +1,4 @@
+import Test from './Test.mdx'
 export default function Page(){
-  return (<div></div>)
+  return (<div className='prose'><Test/></div>)
 }

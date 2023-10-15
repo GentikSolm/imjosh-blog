@@ -1,6 +1,5 @@
 import type { MDXComponents } from "mdx/types";
 import Image from "next/image";
-import rehypeHighlight from "rehype-highlight";
 
 // This file allows you to provide custom React components
 // to be used in MDX files. You can import and use any
@@ -8,13 +7,6 @@ import rehypeHighlight from "rehype-highlight";
 // other libraries.
 
 // This file is required to use MDX in `app` directory.
-const options = {};
-const withMDX = (await import("@next/mdx")).default({
-  options: {
-    rehypePlugins: [[rehypeHighlight(), options]],
-  },
-});
-const { withAxiom } = await import("next-axiom");
 export const MDXStyles = {
   img: ({ children, src, alt }) => (
     <Image
