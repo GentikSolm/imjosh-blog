@@ -1,4 +1,4 @@
-import { DiscIcon, GithubIcon, LinkedinIcon, MailIcon } from "lucide-react";
+import { GithubIcon, LinkedinIcon, MailIcon } from "lucide-react";
 import Image from "next/image";
 
 export default function Page() {
