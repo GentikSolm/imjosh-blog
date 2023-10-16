@@ -16,7 +16,7 @@ export default function Page() {
       <div className="pt-3 text-5xl font-medium">
         Hey there! <br className="sm:hidden" /> Im josh.
       </div>
-      <div className="max-w-2xl pt-5 text-gray-700">
+      <div className="max-w-2xl pt-3 text-gray-700">
         <div>
           Im a software engineer based out of Austin TX and currently CTO at{" "}
           <a
@@ -35,8 +35,8 @@ export default function Page() {
           </a>
           !
         </div>
-        <h3 className="pt-5 text-2xl">A bit of background</h3>
-        <div className="pt-2">
+        <h3 className="pt-6 text-2xl text-gray-800">A bit of background</h3>
+        <div className="pt-1">
           Born and raised in Ohio, I always loved computers and technology. I
           first was introduced to programming in 6th grade where I started
           writing DOS shell scripts on my schools computers. I got introduced to
@@ -59,8 +59,8 @@ export default function Page() {
             <li>- Minor in Business Administration</li>
           </ul>
         </div>
-        <h3 className="pt-5 text-2xl">What im about</h3>
-        <div className="pt-2">
+        <h3 className="pt-6 text-2xl text-gray-800">What im about</h3>
+        <div className="pt-1">
           I love motivating people to build cool stuff, and encourage people to
           never stop learning. I like giving talks to classes at universities,
           and being involived in the tech community.
@@ -87,7 +87,7 @@ export default function Page() {
           Outside of technology, I really love longboarding, working out, and
           spending time with my friends & meeting new people along the way.
         </div>
-        <h3 className="pt-5 text-2xl">Contact me</h3>
+        <h3 className="pt-6 text-2xl text-gray-800">Contact me</h3>
         <div className="flex gap-3 pt-3">
           <a
             className="transition-all hover:text-orange-600"
