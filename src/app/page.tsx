@@ -1,10 +1,11 @@
 import { GithubIcon, LinkedinIcon, MailIcon } from "lucide-react";
 import Image from "next/image";
+import ToggleTheme from "./ToggleTheme";
 
 export default function Page() {
   return (
-    <>
-      <div>
+    <div className="prose dark:prose-invert">
+      <div className="flex justify-between">
         <Image
           className="inline-block h-20 w-20 rounded-full"
           src="/me.jpg"
@@ -12,16 +13,17 @@ export default function Page() {
           width={256}
           height={256}
         />
+        <ToggleTheme />
       </div>
-      <div className="pt-3 text-5xl font-medium">
+      <h1 className="">
         Hey there! <br className="sm:hidden" /> Im josh.
-      </div>
-      <div className="max-w-2xl pt-3 text-gray-700">
-        <div>
+      </h1>
+      <div className="max-w-2xl">
+        <p>
           Im a software engineer based out of Austin TX and currently CTO at{" "}
           <a
             href="https://biblish.com"
-            className="text-blue-600 hover:underline"
+            className="hover:underline"
           >
             Biblish
           </a>
@@ -29,86 +31,84 @@ export default function Page() {
           Check our current project,{" "}
           <a
             href="https://papertrail.biblish.com"
-            className="text-blue-600 hover:underline"
           >
             Papertrail
           </a>
           !
-        </div>
-        <h3 className="pt-6 text-2xl text-gray-800">A bit of background</h3>
-        <div className="pt-1">
+        </p>
+        <h3 >A bit of background</h3>
+        <p>
           Born and raised in Ohio, I always loved computers and technology. I
           first was introduced to programming in 6th grade where I started
           writing DOS shell scripts on my schools computers. I got introduced to
           python the following year where I found my love for programming and
           solving interesting problems.
-        </div>
-        <div className="pt-4">
-          I went on to attended the{" "}
-          <a
-            href="https://uakron.edu"
-            className="text-blue-600 hover:underline"
-          >
-            University of Akron
-          </a>
-          , where I studied
+        </p>
+        <div>
+          <p>
+            I went on to attended the{" "}
+            <a
+              href="https://uakron.edu"
+            >
+              University of Akron
+            </a>
+            , where I studied
+          </p>
           <ul>
-            <li>- Bachelors of Applied Mathematics</li>
-            <li>- Bachelors of Computer Science</li>
-            <li>- Minor in Statistics</li>
-            <li>- Minor in Business Administration</li>
+            <li> Bachelors of Applied Mathematics</li>
+            <li> Bachelors of Computer Science</li>
+            <li> Minor in Statistics</li>
+            <li> Minor in Business Administration</li>
           </ul>
         </div>
-        <h3 className="pt-6 text-2xl text-gray-800">What im about</h3>
-        <div className="pt-1">
+        <h3>What im about</h3>
+        <p>
           I love motivating people to build cool stuff, and encourage people to
           never stop learning. I like giving talks to classes at universities,
           and being involived in the tech community.
-        </div>
-        <div className="pt-4">
+        </p>
+        <p>
           I also love helping out with open source projects where I can. You can
           find some of my contributions in{" "}
           <a
             href="https://github.com/pingdotgg/uploadthing"
-            className="text-blue-600 hover:underline"
           >
             uploadthing
           </a>
           {" and "}
           <a
             href="https://github.com/mdx-editor/editor"
-            className="text-blue-600 hover:underline"
           >
             MDX Editor
           </a>
           .
-        </div>
-        <div className="pt-4">
+        </p>
+        <p>
           Outside of technology, I really love longboarding, working out, and
           spending time with my friends & meeting new people along the way.
-        </div>
-        <h3 className="pt-6 text-2xl text-gray-800">Contact me</h3>
-        <div className="flex gap-3 pt-3">
+        </p>
+        <h3>Contact me</h3>
+        <div className="flex gap-3">
           <a
-            className="transition-all hover:text-orange-600"
+            className="transition-all hover:text-orange-600 dark:hover:text-orange-500"
             href="mailto:hey@imjosh.dev"
           >
             <MailIcon />
           </a>
           <a
-            className="transition-all hover:text-orange-600"
+            className="transition-all hover:text-orange-600 dark:hover:text-orange-500"
             href="https://github.com/gentiksolm"
           >
             <GithubIcon />
           </a>
           <a
-            className="transition-all hover:text-orange-600"
+            className="transition-all hover:text-orange-600 dark:hover:text-orange-500"
             href="https://www.linkedin.com/in/joshgbrown/"
           >
             <LinkedinIcon />
           </a>
         </div>
       </div>
-    </>
+    </div>
   );
 }
