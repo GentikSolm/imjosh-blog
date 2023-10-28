@@ -1,4 +1,3 @@
-
 export default function Page() {
   return (
     <div className="prose dark:prose-invert">
@@ -8,22 +7,14 @@ export default function Page() {
       <div className="max-w-2xl">
         <p>
           Im a software engineer based out of Austin TX and currently CTO at{" "}
-          <a
-            href="https://biblish.com"
-            className="hover:underline"
-          >
+          <a href="https://biblish.com" className="hover:underline">
             Biblish
           </a>
           , where we are building a home for literature in the 21st century.
           Check our current project,{" "}
-          <a
-            href="https://papertrail.biblish.com"
-          >
-            Papertrail
-          </a>
-          !
+          <a href="https://papertrail.biblish.com">Papertrail</a>!
         </p>
-        <h3 >A bit of background</h3>
+        <h3>A bit of background</h3>
         <p>
           Born and raised in Ohio, I always loved computers and technology. I
           first was introduced to programming in 6th grade where I started
@@ -34,12 +25,8 @@ export default function Page() {
         <div>
           <p>
             I went on to attended the{" "}
-            <a
-              href="https://uakron.edu"
-            >
-              University of Akron
-            </a>
-            , where I achieved
+            <a href="https://uakron.edu">University of Akron</a>, where I
+            achieved
           </p>
           <ul>
             <li> Bachelors of Applied Mathematics</li>
@@ -57,18 +44,9 @@ export default function Page() {
         <p>
           I also love helping out with open source projects where I can. You can
           find some of my contributions in{" "}
-          <a
-            href="https://github.com/pingdotgg/uploadthing"
-          >
-            uploadthing
-          </a>
+          <a href="https://github.com/pingdotgg/uploadthing">uploadthing</a>
           {" and "}
-          <a
-            href="https://github.com/mdx-editor/editor"
-          >
-            MDX Editor
-          </a>
-          .
+          <a href="https://github.com/mdx-editor/editor">MDX Editor</a>.
         </p>
         <p>
           Outside of technology, I really love longboarding, working out, and

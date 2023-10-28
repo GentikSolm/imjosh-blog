@@ -1,6 +1,7 @@
 import fsPromises from "fs/promises";
 import matter from "gray-matter";
 import { micromark } from "micromark";
+import path from "path";
 
 function capitalize(s: string) {
   return s
@@ -10,7 +11,8 @@ function capitalize(s: string) {
 }
 
 export async function generateStaticParams() {
-  return await fsPromises.readdir("src/posts", { withFileTypes: false });
+  const filepath = path.join(process.cwd(), "src", "posts");
+  return await fsPromises.readdir(filepath, { withFileTypes: false });
 }
 
 export function generateMetadata({ params }: { params: { slug: string } }) {
@@ -21,7 +23,13 @@ export function generateMetadata({ params }: { params: { slug: string } }) {
 }
 
 export default async function Page({ params }: { params: { slug: string } }) {
-  const file = await fsPromises.readFile(`src/posts/${params.slug}.md`, "utf8");
+  const filepath = path.join(
+    process.cwd(),
+    "src",
+    "posts",
+    params.slug + ".md",
+  );
+  const file = await fsPromises.readFile(filepath, "utf8");
   const data = matter(file);
   return (
     <div className="prose dark:prose-invert">

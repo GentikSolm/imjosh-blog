@@ -53,9 +53,7 @@ export default function RootLayout({
             </div>
             <ToggleTheme />
           </div>
-          <div className='animate-slideUp transition-opacity'>
-          {children}
-          </div>
+          <div className="animate-slideUp transition-opacity">{children}</div>
           <div className="prose mt-auto pt-8 dark:prose-invert">
             <h3>Contact me</h3>
             <div className="flex gap-3">

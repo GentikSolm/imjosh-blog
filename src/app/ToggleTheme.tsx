@@ -14,7 +14,7 @@ export default function ToggleTheme() {
         setIsDark((d) => !d);
       }}
     >
-      {isDark ? <Sun className='text-gray-100'/> : <Moon/>}
+      {isDark ? <Sun className="text-gray-100" /> : <Moon />}
     </button>
   );
 }

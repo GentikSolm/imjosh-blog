@@ -1,9 +1,11 @@
 import fsPromises from "fs/promises";
 import matter from "gray-matter";
 import Link from "next/link";
+import path from "path";
 
 export default async function Page() {
-  const posts = await fsPromises.readdir("src/posts", { withFileTypes: false });
+  const filepath = path.join(process.cwd(), "src", "posts");
+  const posts = await fsPromises.readdir(filepath, { withFileTypes: false });
   const orderedPosts = posts
     .map((f) => {
       const d = matter.read(`src/posts/${f}`);

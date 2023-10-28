@@ -63,4 +63,3 @@ To sum all of these points up, here is a little TLDR checklist
 - Have you tried turning it off and on again? _(This is only half ironic)_
 
 Shoutout to [dont ask to ask](https://dontasktoask.com) for inspiring me to write this article.
-
