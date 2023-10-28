@@ -9,7 +9,6 @@ import Link from "next/link";
 
 export const metadata = {
   title: "imjosh.dev",
-  description: "",
 };
 
 const sans = DM_Sans({

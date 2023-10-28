@@ -2,7 +2,7 @@ import fsPromises from "fs/promises";
 import matter from "gray-matter";
 import Link from "next/link";
 
-export default async function Page({ params }: { params: { slug: string } }) {
+export default async function Page() {
   const posts = await fsPromises.readdir("src/posts", { withFileTypes: false });
   const orderedPosts = posts
     .map((f) => {

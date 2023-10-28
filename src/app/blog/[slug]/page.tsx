@@ -2,8 +2,19 @@ import fsPromises from "fs/promises";
 import matter from "gray-matter";
 import { micromark } from "micromark";
 
+function capitalize(s: string) {
+  return s.split(' ').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' ')
+}
+
 export async function generateStaticParams() {
   return await fsPromises.readdir("src/posts", { withFileTypes: false });
+}
+
+export function generateMetadata({params}: {params: {slug: string}}){
+  return {
+    title: capitalize(params.slug.replace('-', ' ')),
+    description: 'An article by Josh',
+  }
 }
 
 export default async function Page({ params }: { params: { slug: string } }) {
