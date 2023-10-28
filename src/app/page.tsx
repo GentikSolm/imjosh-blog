@@ -1,20 +1,8 @@
 import { GithubIcon, LinkedinIcon, MailIcon } from "lucide-react";
-import Image from "next/image";
-import ToggleTheme from "./ToggleTheme";
 
 export default function Page() {
   return (
     <div className="prose dark:prose-invert">
-      <div className="flex justify-between">
-        <Image
-          className="inline-block h-20 w-20 rounded-full"
-          src="/me.jpg"
-          alt=" "
-          width={256}
-          height={256}
-        />
-        <ToggleTheme />
-      </div>
       <h1 className="">
         Hey there! <br className="sm:hidden" /> Im josh.
       </h1>
@@ -52,7 +40,7 @@ export default function Page() {
             >
               University of Akron
             </a>
-            , where I studied
+            , where I achieved
           </p>
           <ul>
             <li> Bachelors of Applied Mathematics</li>

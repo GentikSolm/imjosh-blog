@@ -4,7 +4,7 @@ import { Moon, Sun } from "lucide-react";
 import { useState } from "react";
 
 export default function ToggleTheme() {
-  const [isDark, setIsDark] = useState(false);
+  const [isDark, setIsDark] = useState(true);
   return (
     <button
       onClick={() => {
@@ -14,7 +14,7 @@ export default function ToggleTheme() {
         setIsDark((d) => !d);
       }}
     >
-      {isDark ? <Sun/> : <Moon/>}
+      {isDark ? <Sun className='text-gray-100'/> : <Moon/>}
     </button>
   );
 }
