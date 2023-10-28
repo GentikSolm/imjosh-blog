@@ -20,9 +20,14 @@ export default async function Page() {
       <ul>
         {orderedPosts.map((p) => (
           <li className="text-xl capitalize" key={p.slug}>
-            <Link href={`/blog/${p.slug}`} className='no-underline hover:underline'>{p.slug.replace("-", " ")}</Link>
-            <span className='pl-4 text-base'>
-            {p.data.posted}
+            <Link
+              href={`/blog/${p.slug}`}
+              className="no-underline hover:underline"
+            >
+              {p.slug.replace("-", " ")}
+            </Link>
+            <span className="pl-4 text-base">
+              {(p.data.posted as Date).toLocaleString().split(",")[0]}
             </span>
           </li>
         ))}

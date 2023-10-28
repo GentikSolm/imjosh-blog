@@ -1,4 +1,3 @@
-import { GithubIcon, LinkedinIcon, MailIcon } from "lucide-react";
 
 export default function Page() {
   return (
@@ -75,27 +74,6 @@ export default function Page() {
           Outside of technology, I really love longboarding, working out, and
           spending time with my friends & meeting new people along the way.
         </p>
-        <h3>Contact me</h3>
-        <div className="flex gap-3">
-          <a
-            className="transition-all hover:text-orange-600 dark:hover:text-orange-500"
-            href="mailto:hey@imjosh.dev"
-          >
-            <MailIcon />
-          </a>
-          <a
-            className="transition-all hover:text-orange-600 dark:hover:text-orange-500"
-            href="https://github.com/gentiksolm"
-          >
-            <GithubIcon />
-          </a>
-          <a
-            className="transition-all hover:text-orange-600 dark:hover:text-orange-500"
-            href="https://www.linkedin.com/in/joshgbrown/"
-          >
-            <LinkedinIcon />
-          </a>
-        </div>
       </div>
     </div>
   );

@@ -6,6 +6,7 @@ import { DM_Sans } from "next/font/google";
 import ToggleTheme from "./ToggleTheme";
 import Image from "next/image";
 import Link from "next/link";
+import { GithubIcon, LinkedinIcon, MailIcon } from "lucide-react";
 
 export const metadata = {
   title: "imjosh.dev",
@@ -25,28 +26,57 @@ export default function RootLayout({
   return (
     <html lang="en" className={clsx("dark h-full", sans.variable)}>
       <body className="mx-auto h-full max-w-7xl bg-neutral-50 px-4 pt-10 text-gray-900 transition-colors dark:bg-neutral-800 sm:px-6 lg:px-8">
-        <div className="pb-20">
+        <div className="flex min-h-full flex-col pb-20">
           <div className="flex items-center justify-between pb-8">
-            <div className='gap-10 flex items-center'>
-            <Link href="/" className="rounded-full">
-              <Image
-                className="inline-block h-20 w-20 rounded-full"
-                src="/me.jpg"
-                alt=" "
-                width={256}
-                height={256}
-              />
-            </Link>
-            <Link className="dark:text-white hover:underline font-medium text-lg" href="/">
-              Home
-            </Link>
-            <Link className="dark:text-white hover:underline font-medium text-lg" href="/blog">
-              Blog
-            </Link>
+            <div className="flex items-center gap-10">
+              <Link href="/" className="rounded-full">
+                <Image
+                  className="inline-block h-20 w-20 rounded-full"
+                  src="/me.jpg"
+                  alt=" "
+                  width={256}
+                  height={256}
+                />
+              </Link>
+              <Link
+                className="text-lg font-medium hover:underline dark:text-white"
+                href="/"
+              >
+                Home
+              </Link>
+              <Link
+                className="text-lg font-medium hover:underline dark:text-white"
+                href="/blog"
+              >
+                Blog
+              </Link>
             </div>
             <ToggleTheme />
           </div>
           {children}
+          <div className="prose mt-auto pt-8 dark:prose-invert">
+            <h3>Contact me</h3>
+            <div className="flex gap-3">
+              <a
+                className="transition-all hover:text-orange-600 dark:hover:text-orange-500"
+                href="mailto:hey@imjosh.dev"
+              >
+                <MailIcon />
+              </a>
+              <a
+                className="transition-all hover:text-orange-600 dark:hover:text-orange-500"
+                href="https://github.com/gentiksolm"
+              >
+                <GithubIcon />
+              </a>
+              <a
+                className="transition-all hover:text-orange-600 dark:hover:text-orange-500"
+                href="https://www.linkedin.com/in/joshgbrown/"
+              >
+                <LinkedinIcon />
+              </a>
+            </div>
+          </div>
           <Analytics />
           <AxiomWebVitals />
         </div>
