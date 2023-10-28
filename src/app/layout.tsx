@@ -9,7 +9,7 @@ import Link from "next/link";
 import { GithubIcon, LinkedinIcon, MailIcon } from "lucide-react";
 
 export const metadata = {
-  title: "imjosh.dev",
+  title: "Im josh",
 };
 
 const sans = DM_Sans({

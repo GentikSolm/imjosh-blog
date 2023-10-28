@@ -25,10 +25,13 @@ export default async function Page({ params }: { params: { slug: string } }) {
   const data = matter(file);
   return (
     <div className="prose dark:prose-invert">
-      <h1 className='mb-0'>{capitalize(params.slug.replace("-", " "))}</h1>
-      <span>Posted {new Date(data.data.posted as string).toLocaleString().split(',')[0]}</span>
+      <h1 className="mb-0">{capitalize(params.slug.replace("-", " "))}</h1>
+      <span>
+        Posted{" "}
+        {new Date(data.data.posted as string).toLocaleString().split(",")[0]}
+      </span>
       <div dangerouslySetInnerHTML={{ __html: micromark(data.content) }}></div>
-      <hr/>
+      <hr />
     </div>
   );
 }
