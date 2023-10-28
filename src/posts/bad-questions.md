@@ -4,7 +4,7 @@ posted: 2023-10-27
 
 > Help, my car wont start!
 
-Imagine your friend comes to you and asks 'Why wont my car start?'. Could you tell them why?
+Imagine your friend comes to you and asks "Why wont my car start?". Could you tell them why?
 If not, why couldn't you? Obviously, since you also drive cars, you should be able to tell
 him what is wrong with his.
 
