@@ -26,7 +26,7 @@ export default async function Page() {
               href={`/blog/${p.slug}`}
               className="no-underline hover:underline"
             >
-              {p.slug.replace("-", " ")}
+              {p.slug.replaceAll("-", " ")}
             </Link>
             <span className="pl-4 text-base">
               {(p.data.posted as Date).toLocaleString().split(",")[0]}

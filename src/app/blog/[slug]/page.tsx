@@ -17,7 +17,7 @@ export async function generateStaticParams() {
 
 export function generateMetadata({ params }: { params: { slug: string } }) {
   return {
-    title: capitalize(params.slug.replace("-", " ")),
+    title: capitalize(params.slug.replaceAll("-", " ")),
     description: "An article by Josh",
   };
 }
@@ -33,7 +33,7 @@ export default async function Page({ params }: { params: { slug: string } }) {
   const data = matter(file);
   return (
     <div className="prose dark:prose-invert">
-      <h1 className="mb-0">{capitalize(params.slug.replace("-", " "))}</h1>
+      <h1 className="mb-0">{capitalize(params.slug.replaceAll("-", " "))}</h1>
       <span>
         Posted{" "}
         {new Date(data.data.posted as string).toLocaleString().split(",")[0]}
