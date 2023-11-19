@@ -7,6 +7,9 @@ import ToggleTheme from "./ToggleTheme";
 import Image from "next/image";
 import Link from "next/link";
 import { GithubIcon, LinkedinIcon, MailIcon } from "lucide-react";
+import Subscribe from "./_components/Subscribe";
+import { Toaster } from "sonner";
+import { ThemeProvider } from "next-themes";
 
 export const metadata = {
   title: "Im josh",
@@ -24,8 +27,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={clsx("dark h-full", sans.variable)}>
+    <html lang="en" suppressHydrationWarning className={clsx("dark h-full", sans.variable)}>
       <body className="mx-auto h-full max-w-7xl bg-neutral-50 px-4 pt-10 text-gray-900 transition-colors dark:bg-neutral-800 sm:px-6 lg:px-8">
+      <ThemeProvider attribute='class'>
         <div className="flex min-h-full flex-col pb-20">
           <div className="flex items-center justify-between pb-8">
             <div className="flex items-center gap-10">
@@ -54,9 +58,9 @@ export default function RootLayout({
             <ToggleTheme />
           </div>
           <div className="animate-slideUp transition-opacity">{children}</div>
-          <div className="prose prose-h3:mt-0 justify-between mt-auto flex pt-8 dark:prose-invert">
+          <div className="flex-col prose mt-auto flex justify-between gap-8 pt-8 dark:prose-invert prose-h3:mt-0 md:flex-row">
             <div>
-              <h3 className=''>Contact me</h3>
+              <h3 className="">Contact me</h3>
               <div className="flex gap-3 pt-1">
                 <a
                   className="transition-all hover:text-orange-600 dark:hover:text-orange-500"
@@ -78,23 +82,17 @@ export default function RootLayout({
                 </a>
               </div>
             </div>
-            <div >
-              <h3>
-                Subscribe to the Blog
-              </h3>
-              <div className=''>
-              <input
-                className="border-2 outline-none focus:border-orange-600 dark:focus:border-orange-500 transition-colors dark:bg-neutral-800 focus-visible:ring-0 focus:ring-0 -mt-2 border-gray-600 px-2 py-2"
-                placeholder="jdoe@email.com"
-              />
-              </div>
+            <div>
+              <h3>Subscribe to the Blog</h3>
+              <Subscribe />
             </div>
           </div>
+          <Toaster richColors={true} />
           <Analytics />
           <AxiomWebVitals />
         </div>
+      </ThemeProvider>
       </body>
-
     </html>
   );
 }

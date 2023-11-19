@@ -1,7 +1,13 @@
 import fsPromises from "fs/promises";
 import matter from "gray-matter";
-import { micromark } from "micromark";
 import path from "path";
+import rehypeHighlight from "rehype-highlight";
+import rehypeSanitize from "rehype-sanitize";
+import rehypeStringify from "rehype-stringify";
+import remarkGfm from "remark-gfm";
+import remarkParse from "remark-parse";
+import remarkRehype from "remark-rehype";
+import { unified } from "unified";
 
 function capitalize(s: string) {
   return s
@@ -22,6 +28,17 @@ export function generateMetadata({ params }: { params: { slug: string } }) {
   };
 }
 
+const toMarkdown = (md: string) => {
+  return unified()
+    .use(remarkParse)
+    .use(remarkGfm)
+    .use(remarkRehype)
+    .use(rehypeSanitize)
+    .use(rehypeHighlight)
+    .use(rehypeStringify)
+    .processSync(md).value;
+};
+
 export default async function Page({ params }: { params: { slug: string } }) {
   const filepath = path.join(
     process.cwd(),
@@ -38,7 +55,7 @@ export default async function Page({ params }: { params: { slug: string } }) {
         Posted{" "}
         {new Date(data.data.posted as string).toLocaleString().split(",")[0]}
       </span>
-      <div dangerouslySetInnerHTML={{ __html: micromark(data.content) }}></div>
+      <div dangerouslySetInnerHTML={{ __html: toMarkdown(data.content) }}></div>
       <hr />
     </div>
   );
