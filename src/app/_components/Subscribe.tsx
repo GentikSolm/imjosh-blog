@@ -38,6 +38,7 @@ export default function Subscribe() {
         placeholder="jdoe@email.com"
       />
       <button
+      onClick={() => void sub(email)}
         className={clsx(
           email.includes('.') ? "opacity-100" : "opacity-0",
           "bg-orange-600 ml-5 px-2 py-1.5 rounded-md text-neutral-800 transition-all hover:bg-orange-700 dark:bg-orange-500 dark:text-white dark:hover:bg-orange-600",
