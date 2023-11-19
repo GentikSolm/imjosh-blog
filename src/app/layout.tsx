@@ -54,33 +54,47 @@ export default function RootLayout({
             <ToggleTheme />
           </div>
           <div className="animate-slideUp transition-opacity">{children}</div>
-          <div className="prose mt-auto pt-8 dark:prose-invert">
-            <h3>Contact me</h3>
-            <div className="flex gap-3">
-              <a
-                className="transition-all hover:text-orange-600 dark:hover:text-orange-500"
-                href="mailto:hey@imjosh.dev"
-              >
-                <MailIcon />
-              </a>
-              <a
-                className="transition-all hover:text-orange-600 dark:hover:text-orange-500"
-                href="https://github.com/gentiksolm"
-              >
-                <GithubIcon />
-              </a>
-              <a
-                className="transition-all hover:text-orange-600 dark:hover:text-orange-500"
-                href="https://www.linkedin.com/in/joshgbrown/"
-              >
-                <LinkedinIcon />
-              </a>
+          <div className="prose prose-h3:mt-0 justify-between mt-auto flex pt-8 dark:prose-invert">
+            <div>
+              <h3 className=''>Contact me</h3>
+              <div className="flex gap-3 pt-1">
+                <a
+                  className="transition-all hover:text-orange-600 dark:hover:text-orange-500"
+                  href="mailto:hey@imjosh.dev"
+                >
+                  <MailIcon />
+                </a>
+                <a
+                  className="transition-all hover:text-orange-600 dark:hover:text-orange-500"
+                  href="https://github.com/gentiksolm"
+                >
+                  <GithubIcon />
+                </a>
+                <a
+                  className="transition-all hover:text-orange-600 dark:hover:text-orange-500"
+                  href="https://www.linkedin.com/in/joshgbrown/"
+                >
+                  <LinkedinIcon />
+                </a>
+              </div>
+            </div>
+            <div >
+              <h3>
+                Subscribe to the Blog
+              </h3>
+              <div className=''>
+              <input
+                className="border-2 outline-none focus:border-orange-600 dark:focus:border-orange-500 transition-colors dark:bg-neutral-800 focus-visible:ring-0 focus:ring-0 -mt-2 border-gray-600 px-2 py-2"
+                placeholder="jdoe@email.com"
+              />
+              </div>
             </div>
           </div>
           <Analytics />
           <AxiomWebVitals />
         </div>
       </body>
+
     </html>
   );
 }
