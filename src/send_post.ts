@@ -13,7 +13,7 @@ async function main() {
   const plunk = new Plunk(api_key);
 
   const success = await plunk.events.track({
-    event: "subscribed",
+    event: "new-post",
     email: "josh.mjbrowns@gmail.com",
     subscribed: false,
     data: {
