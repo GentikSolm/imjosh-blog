@@ -2,11 +2,11 @@ export default function Page() {
   return (
     <div className="prose dark:prose-invert">
       <h1 className="">
-        Hey there! <br className="sm:hidden" /> Im josh.
+        Hey there! <br className="sm:hidden" /> I{"'"}m josh.
       </h1>
       <div className="max-w-2xl">
         <p>
-          Im a software engineer based out of Austin TX. I am currently the
+          I{"'"}m a software engineer based out of Austin TX. I am currently the
           Software Lead at{" "}
           <a href="https://manifold.inc" className="hover:underline">
             Manifold Labs
@@ -37,9 +37,9 @@ export default function Page() {
         <p>
           Before Brunus Labs I was a Web and Application Developer at Cleveland
           Clinic. I created multiple web applications, one of which to this day
-          saves the clinic more than 30k per year in licencing fees. I also
+          saves the clinic more than 30k per year in licensing fees. I also
           moved all of our teams projects from TFVC to git, along with being the
-          first to introduce and setup CICD, inclduing automatic deployments,
+          first to introduce and setup CICD, including automatic deployments,
           concurrent builds, code linting, and more.
         </p>
         <p id="footnote-1" className="text-sm">
@@ -68,12 +68,12 @@ export default function Page() {
             <li> Minor in Business Administration</li>
           </ul>
         </div>
-        <h3>What im about</h3>
+        <h3>What I{"'"}m about</h3>
         <p>
           I love motivating people to build cool stuff, and encourage people to
           never stop learning. I like giving talks to classes at universities,
-          and being involived in the tech community. If your interested in
-          having me talk at your univeristy or other event, shoot me an{" "}
+          and being involved in the tech community. If your interested in having
+          me talk at your university or other event, shoot me an{" "}
           <a href="mailto:hey@imjosh.dev">email</a>!
         </p>
         <p>
