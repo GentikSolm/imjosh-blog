@@ -140,7 +140,6 @@ function sketch(
 
 export default function CLientPage() {
   const element = useRef<HTMLDivElement>(null);
-  const { resolvedTheme } = useTheme();
   return (
     <div ref={element}>
       <NextReactP5Wrapper
