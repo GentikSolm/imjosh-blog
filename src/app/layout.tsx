@@ -9,6 +9,7 @@ import Link from "next/link";
 import { GithubIcon, LinkedinIcon, MailIcon } from "lucide-react";
 import Subscribe from "./_components/Subscribe";
 import { Toaster } from "sonner";
+import { ThemeProvider } from "next-themes";
 
 export const metadata = {
   title: "Im josh",
@@ -26,8 +27,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={clsx("dark h-full", sans.variable)}>
+    <html lang="en" suppressHydrationWarning className={clsx("dark h-full", sans.variable)}>
       <body className="mx-auto h-full max-w-7xl bg-neutral-50 px-4 pt-10 text-gray-900 transition-colors dark:bg-neutral-800 sm:px-6 lg:px-8">
+      <ThemeProvider attribute='class'>
         <div className="flex min-h-full flex-col pb-20">
           <div className="flex items-center justify-between pb-8">
             <div className="flex items-center gap-10">
@@ -89,6 +91,7 @@ export default function RootLayout({
           <Analytics />
           <AxiomWebVitals />
         </div>
+      </ThemeProvider>
       </body>
     </html>
   );

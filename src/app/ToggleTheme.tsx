@@ -1,20 +1,22 @@
 "use client";
 
 import { Moon, Sun } from "lucide-react";
-import { useState } from "react";
+import { useTheme } from "next-themes";
+import { useEffect, useState } from "react";
 
 export default function ToggleTheme() {
-  const [isDark, setIsDark] = useState(true);
+  const { resolvedTheme, setTheme } = useTheme();
+  const [loaded, setLoaded] = useState(false);
+  useEffect(() => {
+    setLoaded(true);
+  },[]);
+  if (!loaded) return null;
   return (
     <button
-      onClick={() => {
-        isDark
-          ? document.documentElement.classList.remove("dark")
-          : document.documentElement.classList.add("dark");
-        setIsDark((d) => !d);
-      }}
+      onClick={() => setTheme(resolvedTheme === "light" ? "dark" : "light")}
     >
-      {isDark ? <Sun className="text-gray-100" /> : <Moon />}
+      {resolvedTheme === "dark" && <Sun className="text-gray-100" />}
+      {resolvedTheme === "light" && <Moon />}
     </button>
   );
 }
