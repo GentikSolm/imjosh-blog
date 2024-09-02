@@ -11,28 +11,34 @@ export default function Page() {
           <a href="https://manifold.inc" className="hover:underline">
             Manifold Labs
           </a>
-          , where we are building the future of search Check our current
-          project, <a href="https://sybil.com">Sybil</a>!
+          , where we design incentive mechanisms for running distributed
+          inference at scale, along with some other cool projects when we are
+          inspired. Some of the projects I{"'"}ve worked on at manifold include{" "}
+          <a href="https://github.com/manifold-inc/targon">Subnet 4</a>,{" "}
+          <a href="https://targon.sybil.com/">Targon Hub</a>,{" "}
+          <a href="https://taobridge.xyz/">Tao - Eth Bridge</a>,{" "}
+          <a href="https://sybil.com/">Sybil</a>, and designing{" "}
+          <a href="https://epistula.sybil.com/">the Epistula Protocol</a>.
         </p>
         <h3>Past Work</h3>
         <p>
           From mid 2022 to 2024 I was proudly the CTO at{" "}
           <a href="https://biblish.com">Biblish</a>, where we built the home of
-          literature for the 21st century. During my time at biblish we launched{" "}
+          literature for the 21st century. During my time at Biblish we launched{" "}
           <a href="https://papertrail.biblish.com">Papertrail</a> and{" "}
           <a href="https://submissions.biblish.com">Submissions</a>.
         </p>
         <p>
           In 2023 I formed my own LLC called{" "}
           <a href="https://brunuslabs.com">Brunus Labs</a> to take on contract
-          work. Since I started Brunus we
+          work. During my time at Brunus
           <sup>
             <a href="#footnote-1" className="pb-1 text-xs no-underline">
               [1]
             </a>
           </sup>{" "}
-          have built from internal time tracking applications, lightweight POS
-          systems, all the way to discord bots and Marketing sites.
+          we built internal time tracking applications, lightweight POS systems,
+          discord bots, Marketing sites and more.
         </p>
         <p>
           Before Brunus Labs I was a Web and Application Developer at Cleveland
@@ -40,7 +46,7 @@ export default function Page() {
           saves the clinic more than 30k per year in licensing fees. I also
           moved all of our teams projects from TFVC to git, along with being the
           first to introduce and setup CICD, including automatic deployments,
-          concurrent builds, code linting, and more.
+          concurrent builds, code linting, and more in our department.
         </p>
         <p id="footnote-1" className="text-sm">
           [1]: I was able to hire 3 of my friends under Brunus Labs during
