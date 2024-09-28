@@ -6,14 +6,13 @@ export default function Page() {
       </h1>
       <div className="max-w-2xl">
         <p>
-          I{"'"}m a software engineer based out of Austin TX. I am currently the
-          Software Lead at{" "}
+          I{"'"}m a software engineer based out of Austin TX, currently CTO at{" "}
           <a href="https://manifold.inc" className="hover:underline">
             Manifold Labs
           </a>
-          , where we design incentive mechanisms for running distributed
-          inference at scale, along with some other cool projects when we are
-          inspired. Some of the projects I{"'"}ve worked on at manifold include{" "}
+          . We design incentive mechanisms for running distributed inference at
+          scale, along with some other cool projects when we are inspired. Some
+          of the projects I{"'"}ve worked on at manifold include{" "}
           <a href="https://github.com/manifold-inc/targon">Subnet 4</a>,{" "}
           <a href="https://targon.sybil.com/">Targon Hub</a>,{" "}
           <a href="https://taobridge.xyz/">Tao - Eth Bridge</a>,{" "}
