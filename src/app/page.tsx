@@ -14,14 +14,14 @@ export default function Page() {
           scale, along with some other cool projects when we are inspired. Some
           of the projects I{"'"}ve worked on at manifold include{" "}
           <a href="https://github.com/manifold-inc/targon">Subnet 4</a>,{" "}
-          <a href="https://targon.sybil.com/">Targon Hub</a>,{" "}
+          <a href="https://targon.com/">Targon Hub</a>,{" "}
           <a href="https://taobridge.xyz/">Tao - Eth Bridge</a>,{" "}
           <a href="https://sybil.com/">Sybil</a>, and designing{" "}
           <a href="https://epistula.sybil.com/">the Epistula Protocol</a>.
         </p>
         <h3>Past Work</h3>
         <p>
-          From mid 2022 to 2024 I was proudly the CTO at{" "}
+          From mid 2022 to early 2024 I was proudly the CTO at{" "}
           <a href="https://biblish.com">Biblish</a>, where we built the home of
           literature for the 21st century. During my time at Biblish we launched{" "}
           <a href="https://papertrail.biblish.com">Papertrail</a> and{" "}
@@ -41,11 +41,8 @@ export default function Page() {
         </p>
         <p>
           Before Brunus Labs I was a Web and Application Developer at Cleveland
-          Clinic. I created multiple web applications, one of which to this day
-          saves the clinic more than 30k per year in licensing fees. I also
-          moved all of our teams projects from TFVC to git, along with being the
-          first to introduce and setup CICD, including automatic deployments,
-          concurrent builds, code linting, and more in our department.
+          Clinic. I created multiple web applications and moved all of our teams
+          projects from TFVC to git (that wasn{"'"}t fun) amongst other things.
         </p>
         <p id="footnote-1" className="text-sm">
           [1]: I was able to hire 3 of my friends under Brunus Labs during
